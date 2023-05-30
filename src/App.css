@@ -1,15 +1,26 @@
+
 .App {
-    padding: 30px;
-    display: flex;
+  padding: 30px;
+  display: flex;
 }
 
 .App > div {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
-.todoList {
-    background-color: teal;
-    border: 2px solid yellowgreen;
-    border-radius: 5px;
-    padding: 28px;
+.error {
+  border: red 1px solid;
 }
+
+.error-message {
+  color: red;
+}
+
+.active-filter {
+  background-color: aquamarine;
+}
+
+.is-done {
+  opacity: 0.5;
+}
+
