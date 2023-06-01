@@ -15,7 +15,6 @@ export const EditableSpan = (props: PropsType) => {
     }
 
     let [updateTitle, updateSetTitle] = useState(props.oldTitle)
-
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         updateSetTitle(e.currentTarget.value)
     }
