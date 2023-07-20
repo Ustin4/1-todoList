@@ -7,9 +7,10 @@ import {TaskType} from "./Todolist";
 
 export type TaskPropsType = {
     task: TaskType
-    changeTaskStatus: (taskId: string, isDone: boolean) => void
-    changeTaskTitle: (taskId: string, newTitle: string) => void
-    removeTask: (taskId: string) => void
+    changeTaskStatus: (taskId: string, isDone: boolean,todolistId:string) => void
+    changeTaskTitle: (taskId: string, newTitle: string,todolistId:string) => void
+    removeTask: (taskId: string,todolistId:string) => void
+    todolistId: string
 }
 
 const Task = memo(({

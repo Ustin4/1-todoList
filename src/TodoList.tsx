@@ -54,15 +54,15 @@ export const Todolist = memo((props: PropsType) => {
     if (props.filter === "completed") {
         tasks = tasks.filter(t => t.isDone === true);
     }
-  /*  const removeTask = useCallback((taskId: string) => props.removeTask(taskId, props.id))
+    /*  const removeTask = useCallback((taskId: string) => props.removeTask(taskId, props.id))
 
-    const changeTaskStatus = useCallback((taskId: string, isDone: boolean) => {
-        props.changeTaskStatus(taskId, isDone);
-    })
+      const changeTaskStatus = useCallback((taskId: string, isDone: boolean) => {
+          props.changeTaskStatus(taskId, isDone);
+      })
 
-    const changeTaskTitle = useCallback((taskId: string, newValue: string) => {
-        props.changeTaskTitle(taskId, newValue, props.id);
-    })*/
+      const changeTaskTitle = useCallback((taskId: string, newValue: string) => {
+          props.changeTaskTitle(taskId, newValue, props.id);
+      })*/
 
     return <div>
         <h3><EditableSpan value={props.title} onChange={changeTodolistTitle}/>
@@ -78,8 +78,9 @@ export const Todolist = memo((props: PropsType) => {
                         key={t.id}
                         task={t}
                         todolistId={props.id}
-
-                    />
+                        changeTaskStatus={props.changeTaskStatus}
+                        changeTaskTitle={props.changeTaskTitle}
+                        removeTask={props.removeTask}/>
                 })
             }
         </div>
@@ -88,8 +89,8 @@ export const Todolist = memo((props: PropsType) => {
                             onClick={onAllClickHandler}
                             color={'primary'}
                             title={'All'}
-            >All
-            </ButtonWithMemo>
+            />All
+
 
             <ButtonWithMemo title={'Active'}
                             color={'primary'}
@@ -100,14 +101,15 @@ export const Todolist = memo((props: PropsType) => {
             <ButtonWithMemo variant={props.filter === 'active' ? 'outlined' : 'text'}
                             onClick={onActiveClickHandler}
                             color={'primary'}
-                            title={'completed'}>Active
-
-            </ButtonWithMemo>
+                            title={'completed'}
+            />Active
 
             <ButtonWithMemo variant={props.filter === 'completed' ? 'outlined' : 'text'}
                             onClick={onCompletedClickHandler}
-                            color={'secondary'}>Completed
-            </ButtonWithMemo>
+                            color={'secondary'}
+                            title={''}
+            />Completed
+
         </div>
     </div>
 })
