@@ -8,6 +8,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.3",
+    "@reduxjs/toolkit": "^1.9.5",
     "@storybook/addon-actions": "^7.1.0",
     "@storybook/addon-storysource": "^7.1.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -75,6 +76,7 @@
     "babel-plugin-named-exports-order": "0.0.2",
     "eslint-plugin-storybook": "^0.6.12",
     "jest-environment-jsdom": "^29.6.1",
+    "prettier": "3.0.2",
     "prop-types": "15.8.1",
     "storybook": "7.1.0",
     "webpack": "5.88.1"
